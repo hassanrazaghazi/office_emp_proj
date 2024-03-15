@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Add Employee{% endblock title %}
+{% block body %}
+<div class="container">
+    <form action="/add_emp" method="post">
+        {% csrf_token %}
+
+      <label for="First_Name" class="form-label ">First Name</label>
+      <br>
+      <input type="text"  id="First_Name" value="{{First_Name}}" name="First_Name"><br>
+      <label for="Last_Name" class="form-label">Last Name</label>
+      <br>
+      <input type="text"  id="Last_Name" value="{{Last_Name}}" name="Last_Name"><br>
+      <label for="salary" class="form-label">Salary</label>
+      <br>
+      <input type="number"  id="salary" value="{{salary}}" name="salary"><br>
+      <label for="dept" class="form-label">Department</label>
+      <br>
+      <input type="number"  id="dept" value="{{dept}}" name="dept"><br>
+      <label for="role" class="form-label">Role</label>
+      <br>
+      <input type="number"  id="role" value="{{role}}" name="role"><br>
+      <label for="bonus" class="form-label">Bonus</label>
+      <br>
+      <input type="number"  id="bonus" value="{{bonus}}" name="bonus"><br>
+      <label for="phone" class="form-label">Phone #</label>
+      <br>
+      <input type="number"  id="phone" value="{{phone}}" name='phone'><br><hr>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+{% endblock body %}
